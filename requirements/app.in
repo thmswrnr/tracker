@@ -1,0 +1,6 @@
+streamlit
+pysqlite3
+pandas
+#plotly-express
+matplotlib
+loguru

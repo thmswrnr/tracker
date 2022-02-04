@@ -1,0 +1,62 @@
+RepMaxTracker:
+  computed:
+    1RM_BRZYCKI: $weight$/(1.0278-(0.0278*$reps$))
+    1RM_EPLEY: (0.033*$weight$*$reps$)+$weight$
+    1RM: ($1RM_BRZYCKI$+$1RM_EPLEY$)/2
+    3RM: 0.91*$1RM$
+    5RM: 0.86*$1RM$
+  plot:
+    x: date
+    y: [1RM, 3RM, 5RM]
+    markers: True
+    labels:
+      date: Datum
+      value: kg
+      variable: Max. Reps
+
+
+TimeTracker:
+  input:
+    T: time
+  plot:
+    T: Time
+
+RepTracker:
+  input:
+    R: reps
+  plot:
+    R: Reps
+
+WeightTracker:
+  input:
+    W: weight
+  plot:
+    W: Weight
+
+DistanceTracker:
+  input:
+    D: distance
+  plot:
+    D: Distance
+
+RFTTracker:
+  input:
+    R: reps
+    T: time
+  computed:
+    R_PER_T: R/T
+    T_PER_R: T/R
+  plot:
+    R_PER_T: Reps/Time
+    T_PER_R: Time/Reps
+
+DFTTracker:
+  input:
+    D: distance
+    T: time
+  computed:
+    D_PER_T: D/T
+    T_PER_D: T/D
+  plot:
+    R_PER_T: Distance/Time
+    T_PER_R: Time/Distance

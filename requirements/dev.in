@@ -1,0 +1,8 @@
+matplotlib
+loguru
+streamlit
+black
+bandit
+flake8
+pylint
+mypy

@@ -1,0 +1,5 @@
+CleanRepMaxTracker:
+  activity: Clean
+  tracker: RepMaxTracker
+  agg_fn: avg
+
